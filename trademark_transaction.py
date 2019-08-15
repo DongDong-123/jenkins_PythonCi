@@ -136,7 +136,7 @@ class Trademark:
         get_balance = process_price(get_balance)
 
         # 选择余额支付
-        self.driver.find_element_by_xpath(".//div[@class='balance-radio']//span").click()
+        # self.driver.find_element_by_xpath(".//div[@class='balance-radio']//span").click()
 
         # 已使用余额
         used_balance = self.driver.find_element_by_xpath(".//label[@id='lbbalance']").text
