@@ -23,10 +23,11 @@ class SendEmail:
 
         # 构造附件内容,附件地址栏
         send_file = open(path, 'rb').read()
-
+        print("打印路径：", path)
         att = MIMEText(send_file, 'base64', 'utf-8')
         att["Content-Type"] = 'application/octet-stream'
         att["Content-Disposition"] = 'attachment;filename="{}"'.format(os.path.split(path)[-1])
+        print("路径", att["Content-Disposition"])
 
         # 构建发送与接收信息
         msgRoot = MIMEMultipart()
